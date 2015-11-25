@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Commands package="guidMyCmdPackage">
+    <Groups>
+      <Group guid="guidMyCmdPackageCmdSet" id="Group" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
+    </Groups>
+    <Combos>
+      <Combo guid="guidMyCmdPackageCmdSet" id="Command" idCommandList="CommandList" type="DropDownCombo" defaultWidth="30" priority="0">
+        <Parent guid="guidMyCmdPackageCmdSet" id="Group" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Item Color</ButtonText>
+          <CommandName>ItemColorPackage</CommandName>
+          <ToolTipText>Select color for Item</ToolTipText>
+        </Strings>
+      </Combo>
+    </Combos>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidMyCmdPackage" value="{7a9f8e8d-ef24-4c98-b859-fc0d4c59d5a9}" />
+    <GuidSymbol name="guidMyCmdPackageCmdSet" value="{b08affdf-590a-4993-b58d-66a1260d89c4}">
+      <IDSymbol name="Group" value="0x1020" />
+      <IDSymbol name="Command" value="0x0100" />
+      <IDSymbol name="CommandList" value="0x0110" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
